@@ -9,8 +9,7 @@ jobs:
           name: "Compiling cathook"
           command: | 
             git submodule update --init --recursive; mkdir build; cd build; cmake
-            -DEnableWarnings=0 ..; make -j8; cd ..
-            echo pwd
+            -DEnableWarnings=0 ..; make -j8; cd ..; echo pwd
       # - store_artifacts:
       #   path: /root/cathook/build
     # The resource_class feature allows configuring CPU and RAM resources for each job. Different resource classes are available for different executors. https://circleci.com/docs/2.0/configuration-reference/#resourceclass
